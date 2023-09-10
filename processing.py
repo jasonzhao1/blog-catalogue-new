@@ -15,7 +15,7 @@ def get_spectral_embedding(netx_graph):
     embeddings = spectral(data, 'blogcatalog')
     return embeddings
 
-
+# logic to handle spectral embedding
 def spectral(data, post_fix):
     from julia.api import Julia
     jl = Julia(compiled_modules=False)

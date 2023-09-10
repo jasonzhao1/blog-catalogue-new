@@ -2,6 +2,7 @@ import torch
 import torch.nn.functional as F
 
 
+# the preliminary MLP, obtained from the paper directly
 class MLP(torch.nn.Module):
     def __init__(self, in_channels, hidden_channels, out_channels, num_layers,
                  dropout, relu_first = True):
@@ -37,6 +38,7 @@ class MLP(torch.nn.Module):
         return x  # Return raw scores (logits)
 
 
+# training function for the model
 def train(model, x, y_true, train_idx, optimizer):
     model.train()
     optimizer.zero_grad()
@@ -47,7 +49,7 @@ def train(model, x, y_true, train_idx, optimizer):
     return loss.item()
 
 
-
+# the test function
 @torch.no_grad()
 def test(model, x, y, split_idx, evaluator):
     model.eval()

@@ -12,6 +12,7 @@ LEARNING_RATE = 0.01
 EPOCHS = 1000
 
 
+# function to train the model and save it to the output
 def get_model(embeddings, labels):
     # Assuming you have the following data:
     # embeddings: The spectral embeddings of your graph nodes.

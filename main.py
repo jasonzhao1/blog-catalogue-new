@@ -5,11 +5,9 @@
 from generate_initial_features import generate_initial_features
 from model_training import get_model
 from processing import get_spectral_embedding, simple_spectral_embedding
-from reader import read_labels, read_graph
+from data_reader import read_labels, read_graph
 
-
-
-# Press the green button in the gutter to run the script.
+# Testing the model fetching
 if __name__ == '__main__':
     labels = read_labels('labels.txt')
     graph = read_graph('graph.txt')
